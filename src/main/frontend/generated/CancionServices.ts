@@ -1,0 +1,10 @@
+import { EndpointRequestInit as EndpointRequestInit_1 } from "@vaadin/hilla-frontend";
+import client_1 from "./connect-client.default.js";
+async function create_1(nombre: string | undefined, idGenero: number | undefined, duracion: number | undefined, url: string | undefined, tipo: string | undefined, idAlbum: number | undefined, init?: EndpointRequestInit_1): Promise<void> { return client_1.call("CancionServices", "create", { nombre, idGenero, duracion, url, tipo, idAlbum }, init); }
+async function delete_1(id: number | undefined, init?: EndpointRequestInit_1): Promise<void> { return client_1.call("CancionServices", "delete", { id }, init); }
+async function listCancion_1(init?: EndpointRequestInit_1): Promise<Array<Record<string, string | undefined> | undefined> | undefined> { return client_1.call("CancionServices", "listCancion", {}, init); }
+async function listTipo_1(init?: EndpointRequestInit_1): Promise<Array<string | undefined> | undefined> { return client_1.call("CancionServices", "listTipo", {}, init); }
+async function ordenar_1(atributo: string | undefined, type: number | undefined, init?: EndpointRequestInit_1): Promise<Array<Record<string, string | undefined> | undefined> | undefined> { return client_1.call("CancionServices", "ordenar", { atributo, type }, init); }
+async function search_1(atributo: string | undefined, texto: string | undefined, type: number | undefined, init?: EndpointRequestInit_1): Promise<Array<Record<string, string | undefined> | undefined> | undefined> { return client_1.call("CancionServices", "search", { atributo, texto, type }, init); }
+async function update_1(id: number | undefined, nombre: string | undefined, idGenero: number | undefined, duracion: number | undefined, url: string | undefined, tipo: string | undefined, idAlbum: number | undefined, init?: EndpointRequestInit_1): Promise<void> { return client_1.call("CancionServices", "update", { id, nombre, idGenero, duracion, url, tipo, idAlbum }, init); }
+export { create_1 as create, delete_1 as delete, listCancion_1 as listCancion, listTipo_1 as listTipo, ordenar_1 as ordenar, search_1 as search, update_1 as update };
